@@ -6,4 +6,7 @@ Inputs: FASTA*, motifs
 
 Motifs need to be one per line in a text file. Currently supports only 10 motifs max. 
 
+Example output:
+
+![alt text](https://github.com/davidvho/motif-mark/blob/master/example_files/example_output.svg)
 
