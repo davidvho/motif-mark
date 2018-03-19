@@ -14,7 +14,7 @@ def mm():
 
 args = mm()
 
-# File
+# input files
 fasta = args.fasta
 motif_file = args.motifs
 
