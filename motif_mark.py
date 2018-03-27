@@ -7,14 +7,14 @@
 import argparse
 
 def mm():
-	parser = argparse.ArgumentParser(description='A script where given a FASTA file where the sequence of each record is the form intronEXONintron, script will output a visual of where motifs are located in each sequence. The output is a PNG and SVG in the working directory. Requires the following python packages: re, SeqIO, cairo, random, numpy, colosys. Last updated: March 18, 2018.')
+	parser = argparse.ArgumentParser(description='A script where given a FASTA file where the sequence of each record is the form intronEXONintron, script will output a visual of where motifs are located in each sequence. The output is a PNG and SVG in the working directory. Requires the following python packages: re, SeqIO, cairo, random, numpy, colosys. Last updated: March 27, 2018.')
 	parser.add_argument("-f", "--fasta", help="Required. FASTA file where the sequence of each record is the form intronEXONintron.", required=True, type=str)
 	parser.add_argument("-m", "--motifs", help="Required. One motif per line. 10 motifs max currently.", required=True, type=str)
 	return parser.parse_args()
 
 args = mm()
 
-# input files
+# File
 fasta = args.fasta
 motif_file = args.motifs
 
@@ -182,7 +182,7 @@ for i in gene_length.keys():
         for a in range(len(where[m])):
             context.set_line_width(12)
             context.move_to(where[m][a]+100,p)
-            context.line_to(where[m][a]+103,p)
+            context.line_to(where[m][a]+100+len(og),p) ## make motifs proportional
             context.stroke()
             
     ## each gene is 65 pixels offset lower
