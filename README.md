@@ -1,6 +1,6 @@
 # Motif Mark
 
-Python script to visualize motifs on sequences.
+A python script to visualize motifs on sequences.
 
 Inputs: FASTA*, motifs
 
@@ -12,3 +12,4 @@ Example output:
 
 ![alt text](https://github.com/davidvho/motif-mark/blob/master/example_files/example_output.svg)
 
+Updated last: March 27, 2018
